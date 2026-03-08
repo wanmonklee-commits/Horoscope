@@ -1,0 +1,255 @@
+/* --- Base Styles & Variables --- */
+:root {
+    --primary-color: #f6c844; /* Astrotalk inspired yellow */
+    --secondary-color: #333333;
+    --bg-color: #ffffff;
+    --bg-light: #f9f9f9;
+    --text-color: #444444;
+    --border-radius: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* --- Navigation Bar --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: var(--bg-color);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links li a:hover {
+    color: #d4a72c;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--secondary-color);
+    transition: 0.3s;
+}
+
+/* --- Hero Section --- */
+.hero {
+    background: linear-gradient(135deg, #fffcf2 0%, #fef3d0 100%);
+    padding: 6rem 5%;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* --- Buttons --- */
+.btn-primary, .btn-secondary {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.btn-primary:hover { background-color: #e5b632; }
+
+.btn-secondary {
+    background-color: white;
+    border: 1px solid #ccc;
+    color: var(--secondary-color);
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.btn-secondary:hover { background-color: var(--bg-light); }
+
+.full-width { width: 100%; margin-top: 1rem;}
+
+/* --- Layouts & Grids --- */
+.section {
+    padding: 4rem 5%;
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: var(--secondary-color);
+}
+
+.bg-light { background-color: var(--bg-light); }
+
+.grid-container {
+    display: grid;
+    /* This creates a responsive grid automatically! */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.horoscope-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+/* --- Cards --- */
+.card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    text-align: center;
+    border: 1px solid #eee;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.astrologer-card { cursor: pointer; }
+
+.avatar {
+    font-size: 3rem;
+    background: var(--bg-light);
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 1rem auto;
+}
+
+.large-avatar { width: 100px; height: 100px; line-height: 100px; font-size: 4rem;}
+
+.price {
+    color: #e54c4c;
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+/* --- Profile Modal --- */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px; right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1rem;
+}
+
+.profile-details p { margin-bottom: 0.5rem; }
+
+/* --- Footer --- */
+footer {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 3rem 5% 1rem 5%;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-col ul { list-style: none; margin-top: 1rem; }
+.footer-col ul li { margin-bottom: 0.5rem; }
+.footer-bottom { text-align: center; border-top: 1px solid #555; padding-top: 1rem; font-size: 0.9rem; }
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hidden by default on mobile */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px; left: 0;
+        background-color: white;
+        text-align: center;
+        padding: 1rem 0;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    
+    .nav-links.active { display: flex; } /* Shown when hamburger clicked */
+    .hamburger { display: flex; }
+    .hero-content h1 { font-size: 2rem; }
+}
