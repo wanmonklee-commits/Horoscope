@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AstroConnect | Online Astrology Consultation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">✨ AstroConnect</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#astrologers">Talk to Astrologer</a></li>
+            <li><a href="#horoscope">Horoscopes</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h1>Consult India's Best Astrologers Online</h1>
+            <p>Get accurate predictions about your future, career, and relationships.</p>
+            <a href="#astrologers" class="btn-primary">Chat Now</a>
+        </div>
+    </header>
+
+    <section id="astrologers" class="section">
+        <h2>Top Astrologers</h2>
+        <div class="grid-container">
+            <div class="card astrologer-card" onclick="openProfile('Ravi Sharma', 'Vedic, Numerology', '15 Years', '₹20/min')">
+                <div class="avatar">👨🏽‍⚕️</div>
+                <h3>Ravi Sharma</h3>
+                <p>Vedic, Numerology</p>
+                <p class="price">₹20/min</p>
+                <button class="btn-secondary">View Profile</button>
+            </div>
+            <div class="card astrologer-card" onclick="openProfile('Priya Desai', 'Tarot, Vastu', '8 Years', '₹15/min')">
+                <div class="avatar">👩🏽‍⚕️</div>
+                <h3>Priya Desai</h3>
+                <p>Tarot, Vastu</p>
+                <p class="price">₹15/min</p>
+                <button class="btn-secondary">View Profile</button>
+            </div>
+            <div class="card astrologer-card" onclick="openProfile('Amit Patel', 'KP Astrology', '12 Years', '₹25/min')">
+                <div class="avatar">👳🏽‍♂️</div>
+                <h3>Amit Patel</h3>
+                <p>KP Astrology</p>
+                <p class="price">₹25/min</p>
+                <button class="btn-secondary">View Profile</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="horoscope" class="section bg-light">
+        <h2>Daily Horoscope</h2>
+        <div class="grid-container horoscope-grid">
+            <div class="card zodiac-card">♈ Aries</div>
+            <div class="card zodiac-card">♉ Taurus</div>
+            <div class="card zodiac-card">♊ Gemini</div>
+            <div class="card zodiac-card">♋ Cancer</div>
+            <div class="card zodiac-card">♌ Leo</div>
+            <div class="card zodiac-card">♍ Virgo</div>
+            <div class="card zodiac-card">♎ Libra</div>
+            <div class="card zodiac-card">♏ Scorpio</div>
+            <div class="card zodiac-card">♐ Sagittarius</div>
+            <div class="card zodiac-card">♑ Capricorn</div>
+            <div class="card zodiac-card">♒ Aquarius</div>
+            <div class="card zodiac-card">♓ Pisces</div>
+        </div>
+    </section>
+
+    <div id="profile-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeProfile()">&times;</span>
+            <div class="profile-header">
+                <div class="avatar large-avatar" id="modal-avatar">🔮</div>
+                <div>
+                    <h2 id="modal-name">Astrologer Name</h2>
+                    <p id="modal-skills">Skills go here</p>
+                </div>
+            </div>
+            <div class="profile-details">
+                <p><strong>Experience:</strong> <span id="modal-exp">10 Years</span></p>
+                <p><strong>Language:</strong> English, Hindi</p>
+                <p><strong>About:</strong> A highly respected astrologer specializing in reading planetary alignments to provide guidance on career, love, and life challenges.</p>
+                <button class="btn-primary full-width">Start Chat (<span id="modal-price">₹0</span>)</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h3>AstroConnect</h3>
+                <p>Your trusted guide to the stars.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#astrologers">Astrologers</a></li>
+                    <li><a href="#horoscope">Horoscopes</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 AstroConnect. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
